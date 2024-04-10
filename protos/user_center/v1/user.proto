@@ -4,7 +4,7 @@ package user_center.v1;     // 指定默认包名
 
 
 // 指定golang包名
-option go_package = "github.com/oubeishi/protos/api";
+//option go_package = "github.com/oubeishi/idol_grpc_api/api";
 
 // The usercenter service definition.
 service UserCenterService {

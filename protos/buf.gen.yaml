@@ -17,3 +17,14 @@ plugins:
     out: doc
     opt:
       - logtostderr=true
+managed:
+  # 启用 buf 的管理功能
+  enabled: true
+#  optimize_for: SPEED
+  go_package_prefix:
+    # 在编译时，将生成的 go 文件的 package 名称设置为 github.com/oubeishi/idol_grpc_api/api，而不是默认的 github.com/oubeishi/idol_grpc_api
+    # 自动添加到 go 文件的 package 名称前缀
+    default: github.com/oubeishi/idol_grpc_api/api
+    # 排除不想要添加前缀的 go 文件
+    except:
+#      - google.com/api

@@ -1,7 +1,7 @@
 syntax = "proto3"; // 指定proto版本
 package common.v1;
 // 指定默认包名
-option go_package = "github.com/oubeishi/protos/api/common";
+//option go_package = "github.com/oubeishi/idol_grpc_api/api/common";
 message Orders {
   string key = 1;
   bool desc = 2;
