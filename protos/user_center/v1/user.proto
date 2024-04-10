@@ -1,0 +1,46 @@
+syntax = "proto3"; // 指定proto版本
+import "common/v1/pagination.proto";
+package user_center.v1;     // 指定默认包名
+
+
+// 指定golang包名
+option go_package = "github.com/oubeishi/protos/api";
+
+// The usercenter service definition.
+service UserCenterService {
+  // Sends a greeting
+  rpc Query(QueryRequest) returns (QueryResponse) {}
+  rpc GetByIds(GetByIdsRequest) returns (GetByIdsResponse) {}
+}
+
+
+message QueryRequest {
+  string user_name = 1;
+  string query_value = 2;
+  int32 status = 3;
+  common.v1.PaginationParam pagination = 4;
+}
+
+message GetByIdsRequest{
+  repeated int32 ids = 1;
+}
+
+message User{
+  int32 id = 1;
+  string user_name = 2;
+  string nick_name = 3;
+  string email = 4;
+  string phone = 5;
+  string avatar = 6;
+  string intro = 7;
+  string created_at = 8;
+  string updated_at = 9;
+}
+
+message QueryResponse {
+  repeated User users = 1;
+}
+
+message GetByIdsResponse {
+  repeated User users = 1;
+}

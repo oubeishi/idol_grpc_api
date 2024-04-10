@@ -1,0 +1,17 @@
+syntax = "proto3"; // 指定proto版本
+package common.v1;
+// 指定默认包名
+option go_package = "github.com/oubeishi/protos/api/common";
+message Orders {
+  string key = 1;
+  bool desc = 2;
+}
+
+message PaginationParam {
+  bool pagination = 1;
+  bool only_count = 2;
+  int32 current = 3;
+  int32 page_size = 4;
+  repeated Orders orders = 5;
+}
+
