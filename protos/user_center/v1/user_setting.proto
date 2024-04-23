@@ -10,6 +10,10 @@ message GetUserSettingByUserIdRequest {
 }
 
 message GetUserSettingByUserIdResponse {
+  UserSetting user_setting = 1;
+}
+
+message UserSetting {
   int32 id = 1;
   string private_chat_access = 2;
   string moment_visible_policy = 3;

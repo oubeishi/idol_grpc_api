@@ -48,6 +48,14 @@
     "v1GetUserSettingByUserIdResponse": {
       "type": "object",
       "properties": {
+        "userSetting": {
+          "$ref": "#/definitions/v1UserSetting"
+        }
+      }
+    },
+    "v1UserSetting": {
+      "type": "object",
+      "properties": {
         "id": {
           "type": "integer",
           "format": "int32"
