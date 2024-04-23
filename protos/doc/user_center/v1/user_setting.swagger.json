@@ -61,10 +61,12 @@
           "format": "int32"
         },
         "privateChatAccess": {
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "momentVisiblePolicy": {
-          "type": "string"
+          "type": "integer",
+          "format": "int32"
         },
         "isDefault": {
           "type": "boolean"

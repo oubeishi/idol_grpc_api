@@ -15,7 +15,7 @@ message GetUserSettingByUserIdResponse {
 
 message UserSetting {
   int32 id = 1;
-  string private_chat_access = 2;
-  string moment_visible_policy = 3;
+  int32 private_chat_access = 2;
+  int32 moment_visible_policy = 3;
   bool is_default = 4;
 }
