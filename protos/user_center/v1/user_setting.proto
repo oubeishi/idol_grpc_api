@@ -1,0 +1,17 @@
+syntax = "proto3"; // 指定proto版本
+package  user_center.v1;
+
+service UserSettingService {
+  rpc GetUserSettingByUserId(GetUserSettingByUserIdRequest) returns (GetUserSettingByUserIdResponse) {}
+}
+
+message GetUserSettingByUserIdRequest {
+  int32 user_id = 1;
+}
+
+message GetUserSettingByUserIdResponse {
+  int32 id = 1;
+  string private_chat_access = 2;
+  string moment_visible_policy = 3;
+  bool is_default = 4;
+}
